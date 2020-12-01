@@ -20,27 +20,18 @@
 %\centering{Total Points: 100\\}
 %\centering{Due Date: Monday, 6 October, %2014}
 \begin{flushleft}
-{\par{Most Statistical Pattern Recognition algorithms assume that given samples are represented in numerical vectors. However, much real-world data is not, but as more complicated structures, such as signals, text, trees, or graphs. Examples are biological sequences (e.g., DNA and RNA), chemical compounds, voices, and semi-structured data. We try to answer the following  $“$Graph classification$”$ question: given a collection of graphs and labeled classes, how can one predict the class of a newly observed graph?}
+{\par{Most Statistical Pattern Recognition algorithms assume that given samples are represented in numerical vectors. However, various types of real-world data are not so easily representable. Some of the real-world kinds of data are naturally representable as signals, text, or graphs. In this project, I focus on chemical compounds and similar data, which are represented by graphs. I try to answer the following graph classification-related question. Given a collection of graphs and labeled classes, how can one predict the class of a newly observed graph?}
 \newline 
-\par{ Graph kernels compute the similarity between pairs of
+\par{ Graph kernels compute the similarity between two
 graphs in dataset $D$, based on the common patterns they share.
-The patterns can range from the simple to the complex.
-Specifically the kernels are designed to exploit random
-walks. The similarity of two graphs
-can be quantified by counting labeled walks
-that are common to both of them. The random walk kernel
-proposed by B. Scholkopf et al is one of the first graph kernels, based on this idea. Shortest paths first
-computes the SP graph $S = (V_{s}, E_{s})$ for each graph $G = (V, E)$. Here $V_{s} = V$ and a weighted edge $(v_{a}, v_{b})$ exists in $E_{s}$ if $v_{a}$ and $v_{b}$ are connected by a path in $G$,
-with the edge weight representing the SP length between
-$v_{a}$ and $v_{b}$. Given the SP
-graphs $S_{i}$ and $S_{j}$ for two input graph $G_{i}$ and $G_{j}$ the kernel is defined as the sum over all pairs of edges from $S_{i}$ and
-$S_{j}$ , using any suitable positive definite kernel on the edges, cyclic patterns and subtrees. The common problem among these kernels is the complexity, However, our focus in this paper is on kernels between different graphs with better computation time, which we discuss in more detail below.}
+These patterns can range from simple to complex. Specifically, the kernels are designed to exploit random walks. The similarity of the two graphs can be quantified by counting labeled walks common to both of them. The random walk kernel proposed by B. Scholkopf et al. is one of the first graph kernels based on this idea. Shortest paths first computes the shortest path graph $S = (V_{s}, E_{s})$ for each graph $G = (V, E)$. Here $V_{s} = V$ and a weighted edge $(v_{a}, v_{b})$ exists in $E_{s}$ if $v_{a}$ and $v_{b}$ are connected by a path in $G$,
+with the edge weight representing the shortest path length between
+$v_{a}$ and $v_{b}$. Given the shortest path graphs $S_{i}$ and $S_{j}$ associated with graph $G_{i}$ and $G_{j}$ the kernel is defined as the sum over all pairs of edges from $S_{i}$ and $S_{j}$, using any suitable positive definite kernel on the edges, cyclic patterns, and subtrees. The common problem among these kernels is the complexity; however, our focus in this work is on kernels between different graphs with better computation time, which we discuss in more detail below.
+}
 \newline 
-\par{While many sophisticated graph kernels have been proposed, efficiency and scalability remain as challenges, for large graph datasets. Our basic idea is to compute several topological and label attributes
-for each graph in the dataset, and to use the derived feature-vector attributes for classification. Like most of the graph
-kernel work, we use SVM. The idea is that the graphs from the same class should have similar topological and label attributes. Our method is simple, and via a detailed comparison on real
-benchmark datasets, we show that our topological and label feature-based approach delivers competitive classification accuracy,
-with better results on those datasets that have large unlabeled graph instances.}}
+\par{While many sophisticated graph kernels have been proposed, efficiency and scalability remain challenging for large graph datasets. Our basic idea is to compute several topological and label attributes for each graph in the dataset and use the derived feature-vector features for classification. Like most of the graph kernel-related works, we utilize SVM. The idea is that the graphs from the same class should have similar topological and label attributes. Our method is simple, and via a detailed comparison of benchmark datasets, we show that our topological and label feature-based approach delivers competitive classification accuracy,
+with better results on those datasets that have large unlabeled graph instances.
+}}
 \end{flushleft}
 
 \flushleft{\textbf{Refrences}} \newline
